@@ -145,16 +145,16 @@ document.write("<div style='border:1px solid blue; padding:10px; width:100%'>");
 var studentScores = [320, 230, 480, 120];
 document.write("<h1> Score of Students : " + studentScores + "<br>" + "</h1>");
 
-// for (var i = 0; i < studentScores.length - 1; i++) {
-//     for (var j = 0; j < studentScores.length - i - 1; j++) {
-//         if (studentScores[j] > studentScores[j + 1]) {
-//             var temp = studentScores[j];
-//             studentScores[j] = studentScores[j + 1];
-//             studentScores[j + 1] = temp;
-//         }
-//     }
-// }
-// document.write("<h1> Ordered Score of Students : " + studentScores + "</h1>");
+for (var i = 0; i < studentScores.length - 1; i++) {
+    for (var j = 0; j < studentScores.length - i - 1; j++) {
+        if (studentScores[j] > studentScores[j + 1]) {
+            var temp = studentScores[j];
+            studentScores[j] = studentScores[j + 1];
+            studentScores[j + 1] = temp;
+        }
+    }
+}
+document.write("<h1> Ordered Score of Students : " + studentScores + "</h1>");
 
 // Another method of question 10
 studentScores.sort((a,b) => a-b);
